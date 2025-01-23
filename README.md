@@ -1,9 +1,11 @@
 # frida-python-ios
 
-This repository provides instructions for setting up and using Frida on a jailbroken iOS device. 
-Traditionally, Frida is controlled from a computer using commands like `frida`, `frida-trace`, or `frida-ps`. 
-The standard Frida package available on Cydia only installs `frida-server` and `frida-agent.dylib` and does not include tools required to run Frida commands directly on the iOS device. 
-With this setup, you can run these commands directly on the iOS device by cross-compiling frida-python for iOS on a Mac.
+This repository provides instructions for setting up `frida` and `frida-tools` on a jailbroken iOS device.
+Traditionally, Frida is controlled from a computer using commands like `frida`, `frida-trace`, or `frida-ps`.
+The [standard Frida setup for jailbroken iOS](https://frida.re/docs/ios/) only installs `frida-server` and `frida-agent.dylib` to the device.
+It does not include the binaries needed to execute Frida commands directly from the command line of iOS devices.
+By cross-compiling frida-python for iOS on a Mac, as demonstrated here, you can execute these commands directly from a terminal app on the iOS device itself.
+This offers two key benefits: 1) Frida becomes accessible on the go, and 2) it removes the overhead of USB communication.
 
 ## Prerequisites
 
